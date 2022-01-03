@@ -15,6 +15,9 @@
   @Html.LabelFor(model => model.Description)
   @Html.EditorFor(model => model.Description)
 
+  @Html.LabelFor(model => model.Complete)
+  @Html.CheckBoxFor(model => model.Complete)
+
   <input type="submit" value="Save" />
 }
 

@@ -10,6 +10,7 @@ namespace ToDoList.Models
     }
     public int ItemId { get; set; }
     public string Description { get; set; }
+    public bool Complete { get; set; } = false;
     public virtual ICollection<CategoryItem> JoinEntities { get; }
   }
 }
