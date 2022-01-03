@@ -4,6 +4,7 @@
 
 @model ToDoList.Models.Item
 
+
 <h4>Add a new task</h4>
 
 @using (Html.BeginForm())
@@ -14,6 +15,15 @@
   @Html.Label("Select category")
   @Html.DropDownList("CategoryId")
 
+  @Html.LabelFor(model => model.DueDate)
+  <input type="text" id="due_date" name="DueDate" />
+
   <input type="submit" value="Add new item" class="btn btn-default" />
 }
 <p>@Html.ActionLink("Show all items", "Index")</p>
+
+<script>
+  $(document).ready(function () {
+    $("#due_date").datepicker({ dateFormat: 'dd/mm/yy' });
+  });
+</script>
